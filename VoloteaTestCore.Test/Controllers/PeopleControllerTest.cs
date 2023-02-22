@@ -12,11 +12,14 @@ namespace VoloteaTestCore.Test.Controllers
 {
     public class PeopleControllerTest
     {
+        private TestDatabaseFixture _fixture { get; set; }
         private PeopleController _controller;
         [SetUp]
         public void Setup()
         {
-            _controller = new PeopleController(new PeopleService(new PeopleRepository()));
+            _fixture = new TestDatabaseFixture();
+            var context = _fixture.CreateContext();
+            _controller = new PeopleController(new PeopleService(new PeopleRepository(context)));
         }
         [Test]
         public void Get()

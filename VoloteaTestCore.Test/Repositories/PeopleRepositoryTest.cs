@@ -11,11 +11,14 @@ namespace VoloteaTestCore.Test.Repositories
 {
     public class PeopleRepositoryTest
     {
+        private TestDatabaseFixture _fixture { get; set; }
         private PeopleRepository _peopleRepository;
         [SetUp]
         public void Setup()
         {
-            _peopleRepository = new PeopleRepository();
+            _fixture = new TestDatabaseFixture();
+            var context = _fixture.CreateContext();
+            _peopleRepository = new PeopleRepository(context);
         }
 
         [Test]
