@@ -12,11 +12,14 @@ namespace VoloteaTestCore.Test.Services
 {
     public class PeopleServiceTest
     {
+        private TestDatabaseFixture _fixture { get; set; }
         private PeopleService _peopleService;
         [SetUp]
         public void Setup()
         {
-            _peopleService = new PeopleService(new PeopleRepository());
+            _fixture = new TestDatabaseFixture();
+            var context = _fixture.CreateContext();
+            _peopleService = new PeopleService(new PeopleRepository(context));
         }
         [Test]
         public void GetAllPeople()

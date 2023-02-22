@@ -8,9 +8,9 @@ using VoloteaTestCore.Core.Models.People;
 
 namespace VoloteaTestCore.EF
 {
-    public class PeopleDbContext:DbContext
+    public class PeopleDbContext : DbContext
     {
-        public PeopleDbContext():base()
+        public PeopleDbContext() : base()
         {
 
         }
@@ -22,7 +22,7 @@ namespace VoloteaTestCore.EF
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.; Initial Catalog=PeopleCoreDb; Integrated Security=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer();
         }
     }
 }
