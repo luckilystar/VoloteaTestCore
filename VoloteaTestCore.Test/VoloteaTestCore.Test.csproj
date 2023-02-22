@@ -16,4 +16,12 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VoloteaTestCore.Core\VoloteaTestCore.Core.csproj" />
+    <ProjectReference Include="..\VoloteaTestCore.EF\VoloteaTestCore.EF.csproj" />
+    <ProjectReference Include="..\VoloteaTestCore.Repository\VoloteaTestCore.Repository.csproj" />
+    <ProjectReference Include="..\VoloteaTestCore.Service\VoloteaTestCore.Service.csproj" />
+    <ProjectReference Include="..\VoloteaTestCore.WebApi\VoloteaTestCore.WebApi.csproj" />
+  </ItemGroup>
+
 </Project>

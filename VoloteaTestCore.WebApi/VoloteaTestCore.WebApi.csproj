@@ -10,4 +10,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VoloteaTestCore.Core\VoloteaTestCore.Core.csproj" />
+    <ProjectReference Include="..\VoloteaTestCore.EF\VoloteaTestCore.EF.csproj" />
+    <ProjectReference Include="..\VoloteaTestCore.Repository\VoloteaTestCore.Repository.csproj" />
+    <ProjectReference Include="..\VoloteaTestCore.Service\VoloteaTestCore.Service.csproj" />
+  </ItemGroup>
+
 </Project>
